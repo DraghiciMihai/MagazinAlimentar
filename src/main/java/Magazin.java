@@ -1,14 +1,7 @@
-import sun.applet.AppletResourceLoader;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
 
 public class Magazin {
     private Map<Produs, Integer> stockProduse = new HashMap<Produs, Integer>();
-    Scanner scanner;
 
 /*    public void incarcaBazaDeDate() throws IOException {
         File file = new File("Alimente.txt");
@@ -44,9 +37,10 @@ public class Magazin {
     }
 
     public void cumparaProduse(List<Produs> listaProduse) {
+        int noulStoc = 0;
         for (Produs produs : listaProduse) {
             if (stockProduse.containsKey(produs)) {
-                int noulStoc = stockProduse.get(produs) - 1;
+                noulStoc = stockProduse.get(produs) - 1;
                 stockProduse.replace(produs, noulStoc);
             }
         }
